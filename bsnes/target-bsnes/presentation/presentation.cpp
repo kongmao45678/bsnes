@@ -92,7 +92,7 @@ auto Presentation::create() -> void {
       program.mute &= ~Program::Mute::Always;
     }
   }).doToggle();  //set initial mute state flag
-  showStatusBar.setText("Show Status Bar").setChecked(settings.general.statusBar).onToggle([&] {
+  showStatusBar.setText("显示状态栏").setChecked(settings.general.statusBar).onToggle([&] {
     settings.general.statusBar = showStatusBar.checked();
     if(!showStatusBar.checked()) {
       layout.remove(statusLayout);
